@@ -21,7 +21,7 @@ public class ClientServiceImplement implements ClientService
     }
 
     @Override
-    public Mono<Client> save(Client client)
+    public Mono<Client> saveClient(Client client)
     {
         return this.clientRepository.save(client);
     }
@@ -39,7 +39,7 @@ public class ClientServiceImplement implements ClientService
     }
 
     @Override
-    public Mono<Void> delete(String dni)
+    public Mono<Void> deleteByDni(String dni)
     {
         return this.clientRepository.deleteById(dni);
     }

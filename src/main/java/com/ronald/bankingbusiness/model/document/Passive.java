@@ -9,11 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("clients")
-public class Client
+@Document("passives")
+public class Passive
 {
     @Id
-    private String dni;
-    private String name;
-    private String typeClient;
+    private String numberAccount;
+    private String typeAccount;
+    private String dniClient;
+    private Double balance;
 }

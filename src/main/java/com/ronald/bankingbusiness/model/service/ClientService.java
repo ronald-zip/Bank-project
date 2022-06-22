@@ -7,9 +7,8 @@ import reactor.core.publisher.Mono;
 public interface ClientService
 {
     Flux<Client> getAll();
-    Mono<Client> save(Client client);
+    Mono<Client> saveClient(Client client);
     Mono<Client> findByDni(String dni);
     Mono<Boolean> existsByDni(String dni);
-
-    Mono<Void> delete(String dni);
+    Mono<Void> deleteByDni(String dni);
 }
