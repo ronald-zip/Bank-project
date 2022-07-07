@@ -1,8 +1,6 @@
-name: Deployment Heroku
+name: Heroku Deployment
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
     branches: [ "master" ]
 
 jobs:
@@ -12,7 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Deploy to Heroku
     - name: Deploy to Heroku
       uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
