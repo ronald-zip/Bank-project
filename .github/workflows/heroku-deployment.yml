@@ -1,0 +1,24 @@
+name: Deployment Heroku
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to Heroku
+    - name: Deploy to Heroku
+      uses: AkhileshNS/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        # Email that you use with heroku
+        heroku_email: ${{secrets.HEROKU_EMAIL}}
+        # The appname to use for deploying/updating
+        heroku_app_name: ${{secrets.HEROKU_APP}}
+        # An optional buildpack to use when creating the heroku application
